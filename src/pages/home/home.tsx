@@ -52,16 +52,26 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <div className="container">
-      <canvas ref={canvasRef} id="matrix"></canvas>
-      <div className="content">
-        <h1 className="text-4xl md:text-6xl">IIT BHU Cybersecurity Club</h1>
-        <p className="text-xl md:text-2xl">Hey Developers</p>
-        <button className="mt-4 border border-green-500 text-green-500 px-5 py-2 bg-transparent hover:bg-green-500 hover:text-black transition-colors duration-300 cursor-pointer">
-          Join Us
-        </button>
+    <>
+      <div className="relative h-screen w-screen bg-black">
+        <canvas
+          ref={canvasRef}
+          id="matrix"
+          className="absolute top-0 left-0 w-full h-full z-10"
+        ></canvas>
+        <div className="content relative z-20 text-center text-white">
+          <h1 className="text-xl md:text-xl lg:text-2xl font-semibold text-white font-press-start relative -top-20 font-h ">Welcome to IIT(BHU) CyberSec Club</h1>
+          {/* <p className="para relative -top-20">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure expedita itaque possimus eum animi, numquam doloremque, iusto quisquam totam saepe optio dolor sit! Tenetur, quia veniam inventore ut autem incidunt eaque non voluptatibus temporibus vero mollitia distinctio, fuga harum natus ducimus tempora soluta expedita, voluptates quis qui. Facere, adipisci minima.
+          </p> */}
+          <button className="relative -left-10">
+            <a href="/blogs" className="text-white font-medium ">
+              EXPLORE OUR LATEST BLOG
+            </a>
+          </button>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 export default Home;

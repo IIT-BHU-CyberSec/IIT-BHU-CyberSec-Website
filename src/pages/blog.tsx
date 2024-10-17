@@ -1,5 +1,6 @@
 const Blog: React.FC = () => {
-  return <></>;
+  return <>
+  </>;
 };
 
 export default Blog;
