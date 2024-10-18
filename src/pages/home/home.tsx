@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./home.css";
+import CyberButton from "../../components/cyberButton/CyberButton";
 
 const Home: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -59,19 +60,15 @@ const Home: React.FC = () => {
           id="matrix"
           className="absolute top-0 left-0 w-full h-full z-10"
         ></canvas>
-        <div className="content relative z-20 text-center text-white">
-          <h1 className="text-xl md:text-xl lg:text-2xl font-semibold text-white font-press-start relative -top-20 font-h ">Welcome to IIT(BHU) CyberSec Club</h1>
-          {/* <p className="para relative -top-20">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure expedita itaque possimus eum animi, numquam doloremque, iusto quisquam totam saepe optio dolor sit! Tenetur, quia veniam inventore ut autem incidunt eaque non voluptatibus temporibus vero mollitia distinctio, fuga harum natus ducimus tempora soluta expedita, voluptates quis qui. Facere, adipisci minima.
-          </p> */}
-          <button className="relative -left-10">
-            <a href="/blogs" className="text-white font-medium ">
-              EXPLORE OUR LATEST BLOG
-            </a>
-          </button>
+        <div className="content relative z-20 text-center text-neon-green">
+          <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold text-neon-green font-fira-code relative -top-20 tracking-wide">
+            Welcome to IIT(BHU) CyberSec Club
+          </h1>
+          <CyberButton prompt="Explore Our Latest Blogs" href="/blogs" />
         </div>
       </div>
     </>
   );
 };
+
 export default Home;
