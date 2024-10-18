@@ -7,7 +7,7 @@ const Navbar: React.FC = () => {
 
   const getCurrentPage = () => {
     const path = location.pathname;
-    return path.split("/").pop() || "home";
+    return path.split("/").pop();
   };
 
   const currentPage = getCurrentPage();
@@ -17,13 +17,13 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-gray-900 border-b border-gray-700 z-50 w-full">
+    <nav className="bg-black border-b border-green-500 z-50 w-full">
       <div className="max-w-screen-xl mx-auto flex items-center justify-between p-4">
         <a
           href="/"
           className="flex items-start space-x-3 rtl:space-x-reverse mr-auto"
         >
-          <span className="text-xl md:text-xl lg:text-2xl font-semibold text-white font-press-start">
+          <span className="text-2xl font-semibold text-neon-green font-press-start">
             Cops Cybersec
           </span>
         </a>
@@ -31,7 +31,7 @@ const Navbar: React.FC = () => {
           onClick={toggleMenu}
           data-collapse-toggle="navbar-default"
           type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-600"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-green-600"
           aria-controls="navbar-default"
           aria-expanded={isMenuOpen}
         >
@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
           className={`md:block md:w-auto ${isMenuOpen ? "block" : "hidden"}`}
           id="navbar-default"
         >
-          <ul className="font-mono flex flex-col p-4 md:p-0 mt-4 border border-gray-800 rounded-lg bg-gray-800 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-gray-900">
+          <ul className="font-mono flex flex-col p-4 md:p-0 mt-4 border border-green-700 rounded-lg bg-black md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-black">
             {[
               { name: "~/Home", link: "/" },
               { name: "~/About Us", link: "/aboutUs" },
@@ -69,8 +69,8 @@ const Navbar: React.FC = () => {
                   href={item.link}
                   className={`text-xs md:text-sm lg:text-base py-2 px-4 rounded transition-colors duration-300 w-32 h-12 flex items-center justify-center ${
                     currentPage === item.link.split("/").pop()
-                      ? "text-white bg-gray-700 rounded-full"
-                      : "text-gray-300 hover:text-green-500"
+                      ? "text-green-500 bg-gray-900"
+                      : "text-gray-300 hover:text-neon-green"
                   } md:p-0`}
                 >
                   {item.name}
