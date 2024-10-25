@@ -3,6 +3,7 @@ import Home from "./pages/home/home";
 import Navbar from "./components/navbar";
 import AboutUs from "./pages/aboutUs";
 import BlogPage from "./pages/blogs/blog";
+import Team from "./pages/team/team.tsx";
 
 const App: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const App: React.FC = () => {
             <Route path="/" element={<Home />} />
             <Route path="/aboutUs" element={<AboutUs />} />
             <Route path="/blogs" element={<BlogPage />} />
+            <Route path="/team" element={<Team />} />
           </Routes>
         </>
       </Router>
