@@ -1,0 +1,13 @@
+.Name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-family: 'paraa', sans-serif;
+  }
+  
+  .headd {
+    font-size: 35px;
+    color: #00ff95;
+    font-family: 'VT323', monospace;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
