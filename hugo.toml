@@ -1,0 +1,6 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'IITBHU_CYBERSEC'
+[taxonomies]
+  category = "categories"
+  tag = "tags"

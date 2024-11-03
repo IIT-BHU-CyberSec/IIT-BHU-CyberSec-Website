@@ -1,0 +1,59 @@
+{{ define "head" }}
+<link rel="stylesheet" href="/css/team.css" />
+{{ end }} {{ define "main" }}
+<div id="team-container" class="bg-black text-white py-10 max-w-screen">
+  <div class="text-center p-10">
+    <h1 id="team-heading" class="text-6xl mb-16 font-headline text-[#00ff00]">
+      Meet Our Team
+    </h1>
+
+    {{ range .Site.Data.team }}
+    <div>
+      <h2 class="text-3xl mb-8 text-green-400 font-year-heading">
+        {{ .title | upper }}
+      </h2>
+
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+      >
+        {{ range .members }}
+        <div class="team-member">
+          <h3 class="text-lg font-code text-green-200">{{ .pseudoName }}</h3>
+          <p class="font-body text-md font-semibold text-white">{{ .name }}</p>
+          <p class="text-sm font-body text-gray-400 mb-4">{{ .description }}</p>
+
+          <div class="separator"></div>
+
+          <div class="social-icons">
+            {{ if .linkedin }}
+            <a
+              href="{{ .linkedin }}"
+              target="_blank"
+              aria-label="LinkedIn"
+              class="hover:scale-110 transition-transform"
+            >
+              <i class="fab fa-linkedin text-blue-500"></i>
+            </a>
+            {{ end }} {{ if .github }}
+            <a
+              href="{{ .github }}"
+              target="_blank"
+              aria-label="GitHub"
+              class="hover:scale-110 transition-transform"
+            >
+              <i class="fab fa-github text-gray-400"></i>
+            </a>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+
+{{ end }} {{ define "scripts" }}
+<script src="/js/team.js"></script>
+<!-- Page-specific script -->
+{{ end }}

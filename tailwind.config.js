@@ -1,7 +1,5 @@
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}", // adjust paths according to your project structure
-  ],
+  content: ["./layouts/**/*.html", "./content/**/*.md", "./static/**/*.js"],
   theme: {
     extend: {
       colors: {
@@ -13,6 +11,8 @@ module.exports = {
       fontFamily: {
         "press-start": ['"Press Start 2P"', "system-ui"],
         "fira-code": ["Unica One", "sans-serif"],
+        "audio-wide": ["Audiowide", "sans-serif"],
+        "vt-323": ["VT323", "sans-serif"],
       },
     },
   },

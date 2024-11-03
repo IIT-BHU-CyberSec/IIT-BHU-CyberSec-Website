@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberSec Club - IIT(BHU)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Fira+Code:wght@300..700&family=Unica+One&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Fira+Code:wght@300..700&family=Unica+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    {{ block "head" . }}{{ end }}
+    <!-- Allow page-specific head content -->
+  </head>
+  <body>
+    <nav class="sticky top-0 bg-black border-b border-green-500 z-50 w-full">
+      {{ partial "navbar.html" . }}
+    </nav>
+    <body class="max-w-screen h-full">
+      {{ block "main" . }}{{ end }}
+      <!-- Main content block -->
+    </body>
+    {{ block "scripts" . }}{{ end }}
+    <!-- Allow page-specific scripts -->
+  </body>
+</html>
