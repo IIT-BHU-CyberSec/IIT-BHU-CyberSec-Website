@@ -1,0 +1,35 @@
+fourth_year:
+  title: "FOURTH YEAR"
+  members:
+    - pseudoName: "p0k3m0n"
+      name: "Ansh Rane"
+      description: "Forensics"
+      linkedin: "https://linkedin.com/ansh"
+      github: "https://github.com/ansh"
+
+third_year:
+  title: "THIRD YEAR"
+  members:
+    - pseudoName: "p0k3m0n"
+      name: "Ansh Rane"
+      description: "Forensics"
+      linkedin: "https://linkedin.com/ansh"
+      github: "https://github.com/ansh"
+
+second_year:
+  title: "SECOND YEAR"
+  members:
+    - pseudoName: "p0k3m0n"
+      name: "Ansh Rane"
+      description: "Forensics"
+      linkedin: "https://linkedin.com/ansh"
+      github: "https://github.com/ansh"
+
+alumni:
+  title: "ALUMNI"
+  members:
+    - pseudoName: "p0k3m0n"
+      name: "Ansh Rane"
+      description: "Forensics"
+      linkedin: "https://linkedin.com/ansh"
+      github: "https://github.com/ansh"

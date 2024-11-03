@@ -1,0 +1,27 @@
+{{ define "head" }}
+<link rel="stylesheet" href="/css/home.css" />
+<link rel="stylesheet" href="/css/button.css" />
+{{ end }} {{ define "main" }}
+<div class="relative h-screen w-screen bg-black">
+  <canvas id="matrix" class="absolute top-0 left-0 w-full h-full"></canvas>
+  <div class="content relative z-20 text-center text-neon-green">
+    <h1
+      class="text-2xl md:text-4xl lg:text-6xl font-bold text-neon-green font-fira-code relative -top-20 tracking-wide"
+    >
+      Welcome to IIT(BHU) CyberSec Club
+    </h1>
+    <a
+      href="/blogs"
+      class="cyber-btn"
+      style="--content: 'Explore our latest blogs'"
+    >
+      <div class="left"></div>
+      Explore our latest blogs
+      <div class="right"></div>
+    </a>
+  </div>
+</div>
+{{ end }} {{ define "scripts" }}
+<script src="/js/matrix.js"></script>
+<!-- Page-specific script -->
+{{ end }}

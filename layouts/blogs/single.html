@@ -1,0 +1,61 @@
+{{ define "main" }}
+<div class="bg-black text-white min-h-screen">
+  <div class="container mx-auto px-8 py-10 flex">
+    <article class="md:w-2/3">
+      <h1 class="text-4xl font-bold mb-6">{{ .Title }}</h1>
+      <p class="text-gray-400 mb-6">
+        {{ .Date.Format "January 2, 2006" }} by {{ .Params.author }}
+      </p>
+      <img
+        src="{{ .Params.image }}"
+        alt="{{ .Title }}"
+        class="max-h-[400px] w-full rounded-md mb-6 object-cover"
+      />
+      <div class="prose prose-lg text-gray-300 leading-relaxed">
+        {{ .Content }}
+      </div>
+
+      <!-- Comments Section -->
+      <div class="mt-10">
+        <h2 class="text-2xl font-bold mb-4">Add Your Comment</h2>
+        <form class="bg-gray-900 p-4 rounded-lg shadow-md">
+          <textarea
+            class="w-full h-32 p-2 bg-gray-800 text-gray-300 rounded-md focus:outline-none focus:ring-2 mb-4"
+            placeholder="Write your comment here..."
+            required
+          ></textarea>
+          <button
+            type="submit"
+            class="bg-green-500 text-black py-2 px-4 rounded-md transition-colors duration-300 hover:bg-green-600 focus:outline-none"
+          >
+            Submit Comment
+          </button>
+        </form>
+      </div>
+
+      <!-- Recent Comments Section -->
+      <div class="mt-10">
+        <h2 class="text-2xl font-bold mb-4">Recent Comments</h2>
+        <div class="bg-gray-900 p-4 rounded-lg shadow-md">
+          {{ if .Params.recent_comments }}
+          <ul class="space-y-2">
+            {{ range .Params.recent_comments }}
+            <li class="text-gray-300">
+              <strong>{{ .author }}</strong>: {{ .comment }}
+              <span class="text-gray-500 text-sm">- {{ .date }}</span>
+            </li>
+            {{ end }}
+          </ul>
+          {{ else }}
+          <p class="text-gray-400">No recent comments yet.</p>
+          {{ end }}
+        </div>
+      </div>
+    </article>
+
+    <div class="md:w-1/3 md:ml-8 mt-10 md:mt-0">
+      {{ partial "sidebar.html" . }}
+    </div>
+  </div>
+</div>
+{{ end }}
