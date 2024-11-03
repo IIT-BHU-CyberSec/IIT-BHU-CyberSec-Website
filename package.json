@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:css": "npx tailwindcss -i ./assets/css/styles.css -o ./static/css/styles.css --minify"
+    "build:css": "npx tailwindcss -i ./assets/css/styles.css -o ./static/css/styles.css --minify",
+    "hugo": "hugo server --disableFastRender --ignoreCache",
+    "dev": "npm run build:css && npm run hugo"
   },
   "keywords": [],
   "author": "",
