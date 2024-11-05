@@ -14,6 +14,19 @@ module.exports = {
         "audio-wide": ["Audiowide", "sans-serif"],
         "vt-323": ["VT323", "sans-serif"],
       },
+      typography: ({ theme }) => ({
+        invert: {
+          css: {
+            "--tw-prose-body": theme("colors.gray[300]"),
+            "--tw-prose-headings": theme("colors.gray[100]"),
+            "--tw-prose-links": theme("colors.green[400]"),
+            "--tw-prose-bold": theme("colors.gray[100]"),
+            "--tw-prose-quotes": theme("colors.gray[100]"),
+            "--tw-prose-table-borders": theme("colors.gray[700]"),
+            "--tw-prose-hr": theme("colors.gray[800]"),
+          },
+        },
+      }),
     },
   },
   plugins: [],
