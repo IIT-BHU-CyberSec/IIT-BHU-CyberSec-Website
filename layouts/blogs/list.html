@@ -7,37 +7,39 @@
         {{ $paginator := .Paginate .Pages }} {{ if $paginator.Pages }}
         <div class="grid grid-cols-1 gap-6">
           {{ range $paginator.Pages }}
-          <div
-            class="bg-gray-800 p-6 rounded-lg shadow-lg cursor-pointer hover:scale-[102%] duration-300 ease-in w-full"
-          >
-            <img
-              src="{{ .Params.image }}"
-              alt="{{ .Title }}"
-              class="min-w-full max-h-[300px] rounded-md mb-4 transition-transform duration-300 object-cover"
-            />
-            <h2 class="text-3xl font-bold mb-4 text-gray-100 select-none">
-              {{ .Title }}
-            </h2>
-            <p class="text-gray-400 font-mono mb-6 select-none">
-              {{ if .Params.categories }} {{ range $index, $category :=
-              .Params.categories }} {{ if $index }}, {{ end }}
-              <a
-                href="/categories/{{ . | urlize }}"
-                class="hover:text-green-500 transition-colors"
-                >{{ . }}</a
-              >
-              {{ end }} {{ else }} Uncategorized {{ end }} / {{ .Params.author
-              }}
-            </p>
-            <p class="text-gray-300 font-mono mb-4 select-none">
-              {{ .Params.excerpt }}
-            </p>
-            <a
-              href="{{ .RelPermalink }}"
-              class="mt-4 px-4 py-2 bg-green-500 text-black rounded-md font-mono transition-colors duration-300 hover:bg-green-600 focus:outline-none"
-              >Read More »</a
+          <a href="{{ .RelPermalink }}" class="block">
+            <div
+              class="bg-gray-800 p-6 rounded-lg shadow-lg cursor-pointer hover:scale-[102%] duration-300 ease-in w-full"
             >
-          </div>
+              <img
+                src="{{ .Params.image }}"
+                alt="{{ .Title }}"
+                class="min-w-full max-h-[300px] rounded-md mb-4 transition-transform duration-300 object-cover"
+              />
+              <h2 class="text-3xl font-bold mb-4 text-gray-100 select-none">
+                {{ .Title }}
+              </h2>
+              <p class="text-gray-400 font-mono mb-6 select-none">
+                {{ if .Params.categories }} {{ range $index, $category :=
+                .Params.categories }} {{ if $index }}, {{ end }}
+                <a
+                  href="/categories/{{ . | urlize }}"
+                  class="hover:text-green-500 transition-colors"
+                  >{{ . }}</a
+                >
+                {{ end }} {{ else }} Uncategorized {{ end }} / {{ .Params.author
+                }}
+              </p>
+              <p class="text-gray-300 font-mono mb-4 select-none">
+                {{ .Params.excerpt }}
+              </p>
+              <span
+                class="mt-4 px-4 py-2 bg-green-500 text-black rounded-md font-mono transition-colors duration-300 hover:bg-green-600 focus:outline-none"
+              >
+                Read More »
+              </span>
+            </div>
+          </a>
           {{ end }}
         </div>
         {{ else }}

@@ -4,6 +4,7 @@ date: 2024-11-05
 author: "John Doe"
 excerpt: "In a fast-paced world, learning new skills is essential for personal and professional growth."
 tags: ["Learning", "Skills", "Personal Development"]
+image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOZLpThczWYcZzliVmbzMvt21RhZTybd0khQ&s"
 ---
 
 ![Learning New Skills](https://via.placeholder.com/800x400.png?text=Learning+New+Skills)

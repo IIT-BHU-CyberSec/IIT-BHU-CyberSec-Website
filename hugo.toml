@@ -4,3 +4,6 @@ title = 'IITBHU_CYBERSEC'
 [taxonomies]
   category = "categories"
   tag = "tags"
+[outputs]
+  home = ["HTML", "JSON"]
+ 

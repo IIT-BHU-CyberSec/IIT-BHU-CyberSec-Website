@@ -1,0 +1,36 @@
+#suggestions {
+  display: none;
+  background-color: #1f2937;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 0.5rem;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+}
+
+.suggestion-item {
+  padding: 0.5rem;
+  border-bottom: 1px solid #374151;
+  transition: background-color 0.2s;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-title {
+  color: #10b981;
+  font-weight: 500;
+  text-decoration: none;
+  display: block;
+}
+
+.suggestion-title:hover {
+  color: #6ee7b7;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
