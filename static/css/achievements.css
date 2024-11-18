@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Ostwald:wght@400&family=Bricolage+Grotesque:wght@400&family=Audiowide&family=Pixels:wght@400&family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+
+#achievements-heading::after {
+  content: "|";
+  opacity: 1;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+      opacity: 0;
+    }
+}
+
+.dotted-line {
+  border-top: 3px dotted green;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.font-headline {
+  font-family: "Audiowide", sans-serif;
+  color: #00ff00;
+}

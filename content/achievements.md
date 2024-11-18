@@ -1,5 +1,5 @@
 ---
 title: "Achievements"
-layout: "Achievements"
+layout: "achievements"
 url: "/achievements"
 ---
