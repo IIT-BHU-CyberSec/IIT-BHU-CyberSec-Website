@@ -70,43 +70,6 @@
       <div class="prose prose-invert prose-lg max-w-none mb-8 blog-content">
         {{ .Content }}
       </div>
-
-      <!-- Comments Section -->
-      <div class="mt-10 bg-gray-800 rounded-lg p-6">
-        <h2 class="text-2xl font-bold mb-4">Comments</h2>
-        <form class="mb-6">
-          <textarea
-            class="w-full h-32 p-4 bg-gray-900 text-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 resize-none"
-            placeholder="Write your comment here..."
-            required
-          ></textarea>
-          <button
-            type="submit"
-            class="mt-4 px-6 py-2 bg-green-500 text-black rounded-lg hover:bg-green-600 transition-colors"
-          >
-            Submit Comment
-          </button>
-        </form>
-
-        <!-- Recent Comments -->
-        {{ if .Params.recent_comments }}
-        <div class="space-y-4">
-          {{ range .Params.recent_comments }}
-          <div class="bg-gray-900 p-4 rounded-lg">
-            <div class="flex items-center justify-between mb-2">
-              <strong class="text-green-500">{{ .author }}</strong>
-              <span class="text-gray-500 text-sm">{{ .date }}</span>
-            </div>
-            <p class="text-gray-300">{{ .comment }}</p>
-          </div>
-          {{ end }}
-        </div>
-        {{ else }}
-        <p class="text-gray-400 text-center py-4">
-          No comments yet. Be the first to comment!
-        </p>
-        {{ end }}
-      </div>
     </article>
 
     <div class="md:w-1/3 md:ml-8 mt-10 md:mt-0">
