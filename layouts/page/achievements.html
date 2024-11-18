@@ -1,0 +1,30 @@
+{{ define "head" }}
+<link rel="stylesheet" href="/css/achievements.css" />
+{{ end }}
+{{ define "main" }}
+<div id="achievements-container" class="bg-black text-white py-10 max-w-screen">
+  <div class="text-center p-10">
+    <h1 id="achievements-heading" class="text-6xl mb-16 font-headline text-[#00ff00]">
+      Achievements
+    </h1>
+    {{ range .Site.Data.achievements }}
+    <div class="container mx-auto md:px-20 sm:px-8">
+      <article class="achievement p-4 mb-4">
+          <div class="flex justify-between items-center">
+              <h2 class="text-3xl font-bold text-green-500 mb-4 font-vt-323">{{ .name }}</h2>
+              <p class="text-xl text-gray-500">{{ .date }}</p>
+          </div>
+          <div class="flex text-justify text-xl">
+              <p class="text-gray-300 text-lg font-mono">{{ .info }}</p>
+          </div>
+      </article>
+      <div class="dotted-line"></div>
+  </div>
+
+    {{ end }}
+  </div>
+</div>
+{{end}}
+{{ define "scripts" }}
+<script src="/js/achievements.js"></script>
+{{ end }}
