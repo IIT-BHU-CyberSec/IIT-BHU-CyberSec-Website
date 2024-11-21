@@ -6,4 +6,5 @@ title = 'IITBHU_CYBERSEC'
   tag = "tags"
 [outputs]
   home = ["HTML", "JSON"]
- 
+ relativeURLs = true
+canonifyURLs = true
